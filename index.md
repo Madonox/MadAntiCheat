@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+# MadAntiCheat V2
 
-You can use the [editor on GitHub](https://github.com/Madonox/MadAntiCheat/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+MadAntiCheat V2 is a remake of MadAntiCheat V1, which had a lot of flaws, false positives, and unoptimized code.  I created V2 in hopes of fixing that!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Installation
 
-### Markdown
+In order to install MadAntiCheat, simply insert this model into your game, configure it, and the model will load the anti cheat for you!
+Model link: https://www.roblox.com/library/8592997329/MadAntiCheat
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Features
 
-```markdown
-Syntax highlighted code block
+MadAntiCheat has a lot of features packed into it, from administrative utilities to preventing exploiters from using exploits in your games!
+Here is a list of all current features:
 
-# Header 1
-## Header 2
-### Header 3
+* Speed check.
+* Ping check (anti-lagswitch).
+* Administrative gui.
+* Screenwatch ability for admins.
+* Anti hitbox expanding.
+* Ability to import admins from external admin systems.
 
-- Bulleted
-- List
+## API
 
-1. Numbered
-2. List
+While MadAntiCheat V2 is certainly an improvement compared to V1, it can still interfere with external scripts.  Because of this, I have made it so that developers can interact with the API to disable certain checks, such as speed.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Getting the API module
+In order to get the API module, you can simply do:
+```lua
+local MadAntiCheatAPI = require(game.ReplicatedStorage:WaitForChild("MadAntiCheatAPI"):WaitForChild("MadAntiCheatAPI"))
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Madonox/MadAntiCheat/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Once you have the API required, you can begin to interact with it.
+In order to interact with any server sided checks (speed, ping, etc), you must use the `invoke` method.
+Below is an example of interacting with the speed check.
+```lua
+MadAntiCheatAPI.invoke("Speed","ignorePlayerNext",game.Players:WaitForChild("Madonox"))
+```
+The code above will ignore the player for **one** check, once that check has passed it will continue to check them.
+**Speed Check Documentation:**
+| Method | Argument(s) | Effect |
+| ------------------------- | --------- | ---------------------------------------- |
+| "ignorePlayerNext" | Player | Ignores check on player once. |
+| "ignorePlayer" | Player | Ignores checks on the player. |
