@@ -5,7 +5,7 @@ MadAntiCheat V2 is a remake of MadAntiCheat V1, which had a lot of flaws, false 
 ## Installation
 
 In order to install MadAntiCheat, simply insert this model into your game, configure it, and the model will load the anti cheat for you!
-Model link: https://www.roblox.com/library/8592997329/MadAntiCheat
+[Model link](https://www.roblox.com/library/8592997329/MadAntiCheat)
 
 ## Features
 
