@@ -37,6 +37,7 @@ MadAntiCheatAPI.invoke("Speed","ignorePlayerNext",game.Players:WaitForChild("Mad
 ```
 The code above will ignore the player for **one** check, once that check has passed it will continue to check them.
 **Speed Check Documentation:**
+
 | Method | Argument(s) | Effect |
 | ------------------------- | --------- | ---------------------------------------- |
 | "ignorePlayerNext" | Player | Ignores check on player once. |
